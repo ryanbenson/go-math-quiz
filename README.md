@@ -6,18 +6,16 @@ Math quiz CLI. You give it a list of questions/answers in a CSV, and see how wel
 * [Glide](https://glide.sh/)
 
 # Getting Started
-After you have Golang and Glide installed, run the CLI command to install the dependencies:
-
-`glide install`
+After you have Golang and Glide installed, run the CLI command to install the dependencies: `make install`
 
 # Development
 ## Testing
-* Test Coverage: `go test -coverprofile cover.out && go tool cover -html=cover.out -o cover.html && open cover.html`
-* Test Suite: `go test`
+* Test Coverage: `make cov`
+* Test Suite: `make test`
 
 # Usage
-* Run `go run quiz.go`
+* Run `make run`
 * If the project is built: `./go-math-quiz`
 
 # Building
-* Run `go build`
+* Run `make`
