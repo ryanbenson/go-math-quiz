@@ -6,7 +6,7 @@ import (
   . "github.com/onsi/gomega"
 )
 
-func TestConfig(t *testing.T) {
+func TestCsv(t *testing.T) {
   g := Goblin(t)
 
   //special hook for gomega
