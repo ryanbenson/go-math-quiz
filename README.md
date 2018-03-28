@@ -11,7 +11,9 @@ After you have Golang and Glide installed, run the CLI command to install the de
 `glide install`
 
 # Development
-* TBD
+## Testing
+* Test Coverage: `go test -coverprofile cover.out && go tool cover -html=cover.out -o cover.html && open cover.html`
+* Test Suite: `go test`
 
 # Usage
 * Run `go run quiz.go`

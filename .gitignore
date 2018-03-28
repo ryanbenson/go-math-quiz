@@ -15,3 +15,7 @@
 
 # Binary
 go-math-quiz
+
+# Coverage files
+cover.*
+coverage.*
