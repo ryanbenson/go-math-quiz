@@ -31,5 +31,22 @@ func TestQuiz(t *testing.T) {
       Ω(invalid).Should(BeFalse())
     })
 
+    g.It("should tell you how many answers you got right", func() {
+      var questionAnswers = [][]string{{"5+5", "10"},{"7+3", "10"},{"1+1", "2"},{"8+3", "11"},{"1+2", "3"}}
+      var answers = []string{"10","10","2","5","3"}
+      validAnswers := 4
+      q := new(Quiz).init(questionAnswers)
+      correctAnswers := q.score(answers)
+      Ω(correctAnswers).Should(Equal(validAnswers))
+    })
+
+    g.It("should give you a grade based on answers correct vs total questions", func() {
+      var questionAnswers = [][]string{{"5+5", "10"},{"7+3", "10"},{"1+1", "2"},{"8+3", "11"},{"1+2", "3"}}
+      validAnswers := 4
+      q := new(Quiz).init(questionAnswers)
+      grade := q.grade(validAnswers)
+      Ω(grade).Should(Equal(80))
+    })
+
   })
 }
