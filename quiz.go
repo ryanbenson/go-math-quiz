@@ -2,6 +2,8 @@ package main
 
 import (
   "fmt"
+  "time"
+  "os"
 )
 
 type Quiz struct {
@@ -12,6 +14,7 @@ func main() {
   var answers []string
   csvData := new(CsvParser).init("problems.csv").parse()
   quiz := new(Quiz).init(csvData.Data)
+  quiz.startTimer()
   for i := range quiz.Content {
     fmt.Println(quiz.Content[i][0])
     var input string
@@ -49,4 +52,13 @@ func (q Quiz) grade(correctAnswers int) int {
   total := len(q.Content)
   percent := (float64(correctAnswers) / float64(total)) * 100
   return int(percent)
+}
+
+func (q Quiz) startTimer() {
+  timer := time.NewTimer(time.Second * 30)
+  go func() {
+    <- timer.C
+    fmt.Println("Time is up! Try again next time")
+    os.Exit(0)
+  }()
 }
