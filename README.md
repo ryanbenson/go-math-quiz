@@ -1,4 +1,4 @@
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/da02054c98c642e58289ebb45064949e)](https://www.codacy.com/app/ryanbenson/go-math-quiz?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ryanbenson/go-math-quiz&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/da02054c98c642e58289ebb45064949e)](https://www.codacy.com/app/ryanbenson/go-math-quiz?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ryanbenson/go-math-quiz&amp;utm_campaign=Badge_Grade)  [![codecov](https://codecov.io/gh/ryanbenson/go-math-quiz/branch/master/graph/badge.svg)](https://codecov.io/gh/ryanbenson/go-math-quiz) [![Build Status](https://travis-ci.org/ryanbenson/go-math-quiz.svg?branch=master)](https://travis-ci.org/ryanbenson/go-math-quiz)
 
 # go-math-quiz
 Math quiz CLI. You give it a list of questions/answers in a CSV, and see how well you do
